@@ -1,0 +1,20 @@
+export const normalizeProduct = (p) => ({
+  id: p.id,
+  name: p.product_name,
+  label: p.label,
+  price: Number(p.product_price),
+  discount: Number(p.product_discount),
+  category: p.product_category,
+  image: p.product_image?.[0] || '',
+  images: p.product_image || [],
+  description: p.product_description,
+  benefits: p.key_benifits,
+  ingredients: p.key_ingredient,
+  usage: p.how_to_use,
+  precautions: p.precautions,
+  brand: p.brand,
+  variant: p.variant,
+  packSize: p.pack_size,
+  fragrance: p.fragnance,
+  faq: p.faq
+});

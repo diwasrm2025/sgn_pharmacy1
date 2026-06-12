@@ -1,0 +1,338 @@
+/* ============================================
+   SGN PHARMACY — GLOBAL CSS
+   Design tokens, reset, typography, utilities
+   ============================================ */
+
+@import '@fontsource/manrope/400.css';
+@import '@fontsource/manrope/500.css';
+@import '@fontsource/manrope/600.css';
+@import '@fontsource/manrope/700.css';
+@import '@fontsource/space-grotesk/400.css';
+@import '@fontsource/space-grotesk/500.css';
+@import '@fontsource/space-grotesk/700.css';
+
+:root {
+  /* ---- Brand ---- */
+  --primary: #D20009;
+  --primary-hover: #a80008;
+  --primary-light: #fff1f1;
+  --primary-border: #fccbcb;
+  --primary-glow: rgba(210,0,9,.12);
+
+  --secondary: #666666;
+  --secondary-hover: #444444;
+
+  /* ---- Neutral palette ---- */
+  --bg-main: #f8f8f8;
+  --bg-white: #ffffff;
+  --bg-dark: #111111;
+  --bg-card: #ffffff;
+  --bg-alt: #f2f4f7;
+
+  /* ---- Text ---- */
+  --text-dark: #111111;
+  --text-main: #333333;
+  --text-muted: #666666;
+  --text-light: #999999;
+
+  /* ---- Borders ---- */
+  --border: #e8e8e8;
+  --border-hover: #c8c8c8;
+
+  /* ---- Fonts ---- */
+  --font-heading: 'Space Grotesk', 'Manrope', 'Segoe UI', sans-serif;
+  --font-body: 'Manrope', 'Segoe UI', sans-serif;
+
+  /* ---- Radii (square theme, only tiny rounding) ---- */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* ---- Shadows ---- */
+  --shadow-xs: 0 1px 3px rgba(0,0,0,.06);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,.07);
+  --shadow-md: 0 4px 20px rgba(0,0,0,.09);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,.11);
+  --shadow-xl: 0 20px 60px rgba(0,0,0,.14);
+  --shadow-primary: 0 6px 20px rgba(210,0,9,.22);
+
+  /* ---- Motion ---- */
+  --ease: cubic-bezier(.4,0,.2,1);
+  --transition: all .22s var(--ease);
+  --transition-slow: all .4s var(--ease);
+}
+
+/* ============================================
+   RESET
+   ============================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-main);
+  color: var(--text-main);
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-dark);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+button, input, textarea, select {
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ============================================
+   LAYOUT UTILITIES
+   ============================================ */
+.section-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 36px;
+  gap: 16px;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(22px, 2.5vw, 30px);
+  font-weight: 800;
+  color: var(--text-dark);
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+}
+.section-title span {
+  color: var(--primary);
+}
+.section-subtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+/* ============================================
+   SHARED BUTTON STYLES
+   ============================================ */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+  letter-spacing: 0.2px;
+  box-shadow: var(--shadow-primary);
+}
+.btn-primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(210,0,9,.28);
+}
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+.btn-outline:hover {
+  background: var(--primary-light);
+  transform: translateY(-1px);
+}
+
+.view-all-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  color: var(--primary);
+  border: 1.5px solid var(--primary-border);
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+  white-space: nowrap;
+}
+.view-all-btn:hover {
+  background: var(--primary-light);
+  border-color: var(--primary);
+  color: var(--primary-hover);
+}
+.view-all-btn-lg {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 14px 36px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+  box-shadow: var(--shadow-primary);
+}
+.view-all-btn-lg:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(210,0,9,.30);
+}
+
+/* ============================================
+   TOAST
+   ============================================ */
+.toast {
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%) translateY(24px);
+  background: #111;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: var(--shadow-xl);
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .3s var(--ease);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 240px;
+  justify-content: center;
+}
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+.toast i { color: #4ade80; font-size: 18px; }
+
+/* ============================================
+   BACK-TO-TOP
+   ============================================ */
+.back-top {
+  position: fixed;
+  bottom: 90px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-primary);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(16px);
+  transition: var(--transition);
+  z-index: 800;
+}
+.back-top.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.back-top:hover { background: var(--primary-hover); transform: translateY(-2px); }
+
+/* ============================================
+   SCROLL ROW
+   ============================================ */
+.scroll-row {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 8px;
+  scrollbar-width: none;
+}
+.scroll-row::-webkit-scrollbar { display: none; }
+.scroll-row > * { scroll-snap-align: start; flex-shrink: 0; }
+
+.scroll-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  background: var(--bg-white);
+  border: 1.5px solid var(--border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--text-dark);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+.scroll-arrow:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
+.scroll-arrow-left { left: -20px; }
+.scroll-arrow-right { right: -20px; }
+
+/* ============================================
+   SECTION BACKGROUNDS
+   ============================================ */
+.section-bg-white { background: var(--bg-white); padding: 72px 0; }
+.section-bg-alt { background: var(--bg-alt); padding: 72px 0; }
+.section-bg-dark { background: var(--bg-dark); padding: 72px 0; color: #fff; }
