@@ -3,7 +3,7 @@ import SiteHeader from './SiteHeader';
 import Footer from './Footer';
 const locations = [
   {
-    name: 'Trichy SRM Hospital Inpatient Pharmacy Outpatient Pharmacy Casualty Pharmacy',
+    name: 'Trichy SRM Hospital',
     googleMap: 'https://maps.app.goo.gl/6eJjc7eDdpSrgt1C7',
     mobile: '7871006465'
   },
@@ -43,7 +43,7 @@ const locations = [
     mobile: '9087944410'
   },
   {
-    name: 'Perambalur Old Busstand',
+    name: 'Perambalur Old Bus stand',
     googleMap: 'https://maps.app.goo.gl/EbLfqQm4MNvozyeUA',
     mobile: '9087905252'
   },
@@ -90,15 +90,17 @@ const ContactPage = ({ cart = [] }) => {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: 24 }}>
             {locations.map((loc, i) => (
               <div key={i} style={{ background: '#fff', borderRadius: 16, padding: 24, boxShadow: '0 4px 12px rgba(0,0,0,0.05)', border: '1px solid #f0f0f0' }}>
-                <div style={{ width: 40, height: 40, background: '#3182ce15', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 16 }}>
-                  <i className="ti ti-map-pin" style={{ color: '#3182ce', fontSize: 20 }}></i>
-                </div>
+                <a href={loc.googleMap} target="_blank" rel="noopener noreferrer">
+                  <div style={{ width: 40, height: 40, background: '#3182ce15', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 16 }}>
+                    <i className="ti ti-map-pin" style={{ color: '#3182ce', fontSize: 20 }}></i>
+                  </div>
+                </a>
                 <h3 style={{ fontSize: 18, fontWeight: 800, marginBottom: 8, color: '#2d3748' }}>{loc.name}</h3>
                 <div style={{ marginBottom: 12, display: 'flex', alignItems: 'center', gap: 8, color: '#4a5568', fontSize: 14 }}>
                   <i className="ti ti-phone" style={{ color: '#38a169' }}></i>
                   <strong>{loc.mobile}</strong>
                 </div>
-                <a href={loc.googleMap} target="_blank" rel="noopener noreferrer"style={{ color: '#718096', fontSize: 13, lineHeight: 1.5, margin: 0 }}>View Location</a>
+                <a href={loc.googleMap} target="_blank" rel="noopener noreferrer"style={{ color: '#1750a5', fontSize: 13, lineHeight: 1.5, margin: 0 ,textDecoration:'underline'}}>View Location</a>
               </div>
             ))}
           </div>

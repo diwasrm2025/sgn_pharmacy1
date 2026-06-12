@@ -289,4 +289,6 @@ nav#navbar.scrolled {
   .nav-search { display: none; }
   .mobile-toggle { display: flex; }
   .nav-actions { display: none; }
+  .topbar{flex-direction:column;}
+  span.seperator{display:none!important}
 }

@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import { Routes, Route, useNavigate, Link } from 'react-router-dom';
 import { DATA } from './data/data';
 import ProductCard from './components/ProductCard';
 import CartSidebar from './components/CartSidebar';
@@ -162,7 +162,11 @@ function HomePage({ cart, onAddToCart, onChangeQty, showToastMsg }) {
                 <div className="hero-stat-divider"></div>
                 <div className="hero-stat"><strong>90K+</strong><span>Products</span></div>
                 <div className="hero-stat-divider"></div>
-                <div className="hero-stat"><strong>14</strong><span>Outlets</span></div>
+                <div className="hero-stat">
+                  <Link to='/contact'>
+                  <strong>14</strong><span>Outlets</span>
+                  </Link>
+                </div>
               </div>
               <div className="hero-btns">
                 <button className="btn-primary-hero" onClick={() => navigate('/all-products?category=Medicines')}>
