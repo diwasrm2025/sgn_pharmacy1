@@ -1,24 +1,78 @@
 import React from 'react';
 import SiteHeader from './SiteHeader';
 import Footer from './Footer';
-
 const locations = [
-  { name: 'Mumbai Main Branch', mobile: '+91 98765 43210', address: 'Andheri West, Mumbai, MH' },
-  { name: 'Delhi Central Hub', mobile: '+91 98765 43211', address: 'Connaught Place, New Delhi, DL' },
-  { name: 'Bangalore Tech Center', mobile: '+91 98765 43212', address: 'Whitefield, Bangalore, KA' },
-  { name: 'Chennai Regional Office', mobile: '+91 98765 43213', address: 'T. Nagar, Chennai, TN' },
-  { name: 'Hyderabad Clinic Point', mobile: '+91 98765 43214', address: 'Jubilee Hills, Hyderabad, TS' },
-  { name: 'Kolkata East Depot', mobile: '+91 98765 43215', address: 'Salt Lake, Kolkata, WB' },
-  { name: 'Pune City Station', mobile: '+91 98765 43216', address: 'Shivaji Nagar, Pune, MH' },
-  { name: 'Ahmedabad Care Center', mobile: '+91 98765 43217', address: 'Navrangpura, Ahmedabad, GJ' },
-  { name: 'Jaipur Pink City Unit', mobile: '+91 98765 43218', address: 'Malviya Nagar, Jaipur, RJ' },
-  { name: 'Lucknow North Hub', mobile: '+91 98765 43219', address: 'Gomti Nagar, Lucknow, UP' },
-  { name: 'Indore Medical Center', mobile: '+91 98765 43220', address: 'Vijay Nagar, Indore, MP' },
-  { name: 'Chandigarh Plaza Store', mobile: '+91 98765 43221', address: 'Sector 17, Chandigarh, CH' },
-  { name: 'Kochi Coastal Unit', mobile: '+91 98765 43222', address: 'Marine Drive, Kochi, KL' },
-  { name: 'Surat Diamond Branch', mobile: '+91 98765 43223', address: 'Adajan, Surat, GJ' }
+  {
+    name: 'Trichy SRM Hospital Inpatient Pharmacy Outpatient Pharmacy Casualty Pharmacy',
+    googleMap: 'https://maps.app.goo.gl/6eJjc7eDdpSrgt1C7',
+    mobile: '7871006465'
+  },
+  {
+    name: 'Samayapuram Toll Plaza',
+    googleMap: 'https://maps.app.goo.gl/5n5nf6Z4Rjx59cvW9',
+    mobile: '9087944406'
+  },
+  {
+    name: 'Ponmalaipatti',
+    googleMap: 'https://maps.app.goo.gl/4g3LRySZKqRgj6M66',
+    mobile: '9087944407'
+  },
+  {
+    name: 'Samayapuram Kadaiveethi',
+    googleMap: 'https://maps.app.goo.gl/ZDA6r6aLFUuUCZDw8',
+    mobile: '9087944401'
+  },
+  {
+    name: 'Sangenthi',
+    googleMap: 'https://maps.app.goo.gl/8Mf5Gf8R9s9KsGyN6',
+    mobile: '9087944403'
+  },
+  {
+    name: 'Thuraiyur',
+    googleMap: 'https://maps.app.goo.gl/8U2u31berDzHDuvc6',
+    mobile: '9087944408'
+  },
+  {
+    name: 'Perambalur 4 Road',
+    googleMap: 'https://maps.app.goo.gl/Lse8PqkAzDu89TyHA',
+    mobile: '9087901515'
+  },
+  {
+    name: 'Perambalur New Busstand',
+    googleMap: 'https://maps.app.goo.gl/LPRY7Z6r15qQNmMn8',
+    mobile: '9087944410'
+  },
+  {
+    name: 'Perambalur Old Busstand',
+    googleMap: 'https://maps.app.goo.gl/EbLfqQm4MNvozyeUA',
+    mobile: '9087905252'
+  },
+  {
+    name: 'Valadi',
+    googleMap: 'https://maps.app.goo.gl/ud6K7Cp1QTPduY8cA',
+    mobile: '9087944404'
+  },
+  {
+    name: 'Mullai Nagar - Ramapuram Chennai',
+    googleMap: 'https://maps.app.goo.gl/LigSzRHM7mM3QD4bA',
+    mobile: '7824858000'
+  },
+  {
+    name: 'SRM Prime Hospital',
+    googleMap: 'https://maps.app.goo.gl/UUGW9pazh3BNnc6X7',
+    mobile: '9600005003'
+  },
+  {
+    name: 'SRM Hospital West Mambalam',
+    googleMap: 'https://maps.app.goo.gl/fmCRD2tDFTxnjkwBA',
+    mobile: '7550044199'
+  },
+  {
+    name: 'SGN Opticals',
+    googleMap: 'https://maps.app.goo.gl/6eJjc7eDdpSrgt1C7',
+    mobile: '7871006848'
+  }
 ];
-
 const ContactPage = ({ cart = [] }) => {
   const cartCount = cart.reduce((a, b) => a + b.qty, 0);
 
@@ -44,7 +98,7 @@ const ContactPage = ({ cart = [] }) => {
                   <i className="ti ti-phone" style={{ color: '#38a169' }}></i>
                   <strong>{loc.mobile}</strong>
                 </div>
-                <p style={{ color: '#718096', fontSize: 13, lineHeight: 1.5, margin: 0 }}>{loc.address}</p>
+                <a href={loc.googleMap} target="_blank" rel="noopener noreferrer"style={{ color: '#718096', fontSize: 13, lineHeight: 1.5, margin: 0 }}>View Location</a>
               </div>
             ))}
           </div>

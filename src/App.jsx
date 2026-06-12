@@ -161,6 +161,8 @@ function HomePage({ cart, onAddToCart, onChangeQty, showToastMsg }) {
                 <div className="hero-stat"><strong>75M+</strong><span>Orders Delivered</span></div>
                 <div className="hero-stat-divider"></div>
                 <div className="hero-stat"><strong>90K+</strong><span>Products</span></div>
+                <div className="hero-stat-divider"></div>
+                <div className="hero-stat"><strong>14</strong><span>Outlets</span></div>
               </div>
               <div className="hero-btns">
                 <button className="btn-primary-hero" onClick={() => navigate('/all-products?category=Medicines')}>
