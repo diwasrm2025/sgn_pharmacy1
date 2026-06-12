@@ -4,12 +4,6 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
 
-  resolve: {
-    alias: {
-      firebase: 'firebase/app' // 🔥 CRITICAL FIX
-    }
-  },
-
   optimizeDeps: {
     include: [
       'firebase/app',
