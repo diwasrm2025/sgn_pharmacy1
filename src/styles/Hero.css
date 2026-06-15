@@ -4,6 +4,8 @@
 .hero-modern {
   background: linear-gradient(135deg, #fdf0f0 0%, #fff 60%);
   padding: 56px 0 60px;
+  height:70vh;
+  display:flex;
   border-bottom: 1px solid var(--border);
 }
 .hero-modern-inner {

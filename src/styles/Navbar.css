@@ -242,7 +242,7 @@ nav#navbar.scrolled {
   background: var(--bg-white);
   border-bottom: 1px solid var(--border);
   position: sticky;
-  top: 73px;
+  top: 63px;
   z-index: 99;
   box-shadow: var(--shadow-xs);
   overflow-x: auto;

@@ -356,6 +356,7 @@ const buildFlatProductCatalog = () => {
 
         product_price: finalPrice,           // numeric (IMPORTANT FIX)
 
+        
         product_category: blueprint.category,
         key_benifits: blueprint.benefits,
         key_ingredient: blueprint.ing,
