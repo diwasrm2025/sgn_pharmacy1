@@ -16,8 +16,8 @@ const CareerPage = ({ cart = [] }) => {
     <div className="App">
       <SiteHeader searchQuery="" setSearchQuery={() => {}} onSearchSubmit={() => {}} onOpenCart={() => {}} cartCount={cartCount} onOpenPrescription={() => {}} />
 
-      <section style={{ background: 'linear-gradient(135deg, #1c4532 0%, #276749 100%)', padding: '60px 24px', color: 'white', textAlign: 'center' }}>
-        <h1 style={{ fontFamily: 'Space Grotesk', fontSize: 42, fontWeight: 800, marginBottom: 12,color: '#f0fff4'}}>Join Our <span style={{ color: '#68d391' }}>Team</span></h1>
+      <section style={{ background: 'linear-gradient(90deg, #8b0000 0%, #c62828 50%, #e53935 100%)', padding: '60px 24px', color: 'white', textAlign: 'center' }}>
+        <h1 style={{ fontFamily: 'Space Grotesk', fontSize: 42, fontWeight: 800, marginBottom: 12,color: '#f0fff4'}}>Join Our <span style={{ color: '#000000' }}>Team</span></h1>
         <p style={{ color: '#f0fff4', fontSize: 16, maxWidth: 600, margin: '0 auto' }}>Build the future of healthcare technology and delivery. We are looking for passionate individuals to join our growing family.</p>
       </section>
 
@@ -71,7 +71,7 @@ const CareerPage = ({ cart = [] }) => {
                   <textarea rows="4" placeholder="Tell us why you are a good fit..."></textarea>
                 </div>
 
-                <button type="submit" className="prescription-submit-btn" style={{ marginTop: '12px', background: '#38a169' }}>Submit Application</button>
+                <button type="submit" className="prescription-submit-btn" style={{ marginTop: '12px', background: '#a13838' }}>Submit Application</button>
               </form>
             </div>
           ) : (
@@ -79,7 +79,7 @@ const CareerPage = ({ cart = [] }) => {
               <div style={{ width: 80, height: 80, background: '#38a16915', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 24px' }}><i className="ti ti-circle-check" style={{ color: '#38a169', fontSize: 40 }}></i></div>
               <h2 style={{ fontFamily: 'Space Grotesk', fontSize: 28, fontWeight: 800 }}>Application Received!</h2>
               <p style={{ color: '#4a5568', marginTop: 12 }}>Thank you for your interest in SGN Pharmacy. Our HR team will review your application and contact you if your profile matches our requirements.</p>
-              <button onClick={() => setSubmitted(false)} style={{ marginTop: 24, padding: '12px 24px', border: 'none', background: '#38a169', color: 'white', borderRadius: 8, fontWeight: 700, cursor: 'pointer' }}>Apply for Another Role</button>
+              <button onClick={() => setSubmitted(false)} style={{ marginTop: 24, padding: '12px 24px', border: 'none', background: '#a13838', color: 'white', borderRadius: 8, fontWeight: 700, cursor: 'pointer' }}>Apply for Another Role</button>
             </div>
           )}
         </div>

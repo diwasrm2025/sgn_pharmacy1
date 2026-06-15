@@ -80,8 +80,8 @@ const ContactPage = ({ cart = [] }) => {
     <div className="App">
       <SiteHeader searchQuery="" setSearchQuery={() => {}} onSearchSubmit={() => {}} onOpenCart={() => {}} cartCount={cartCount} onOpenPrescription={() => {}} />
 
-      <section style={{ background: 'linear-gradient(135deg, #1a365d 0%, #2b6cb0 100%)', padding: '60px 24px', color: 'white', textAlign: 'center' }}>
-        <h1 style={{ fontFamily: 'Space Grotesk', fontSize: 42, fontWeight: 800, marginBottom: 12,color: '#e2e8f0' }}>Contact <span style={{ color: '#90cdf4' }}>Us</span></h1>
+      <section style={{ background: 'linear-gradient(90deg, #8b0000 0%, #c62828 50%, #e53935 100%)', padding: '60px 24px', color: 'white', textAlign: 'center' }}>
+        <h1 style={{ fontFamily: 'Space Grotesk', fontSize: 42, fontWeight: 800, marginBottom: 12,color: '#ffffff' }}>Contact <span style={{ color: '#2b2b2b' }}>Us</span></h1>
         <p style={{ color: '#e2e8f0', fontSize: 16, maxWidth: 600, margin: '0 auto' }}>Find our presence across India. We are committed to providing 24/7 pharmaceutical support at your nearest location.</p>
       </section>
 
@@ -91,8 +91,8 @@ const ContactPage = ({ cart = [] }) => {
             {locations.map((loc, i) => (
               <div key={i} style={{ background: '#fff', borderRadius: 16, padding: 24, boxShadow: '0 4px 12px rgba(0,0,0,0.05)', border: '1px solid #f0f0f0' }}>
                 <a href={loc.googleMap} target="_blank" rel="noopener noreferrer">
-                  <div style={{ width: 40, height: 40, background: '#3182ce15', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 16 }}>
-                    <i className="ti ti-map-pin" style={{ color: '#3182ce', fontSize: 20 }}></i>
+                  <div style={{ width: 40, height: 40, background: '#ce313115', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 16 }}>
+                    <i className="ti ti-map-pin" style={{ color: '#ce3131', fontSize: 20 }}></i>
                   </div>
                 </a>
                 <h3 style={{ fontSize: 18, fontWeight: 800, marginBottom: 8, color: '#2d3748' }}>{loc.name}</h3>
