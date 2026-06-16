@@ -80,9 +80,12 @@ const ContactPage = ({ cart = [] }) => {
     <div className="App">
       <SiteHeader searchQuery="" setSearchQuery={() => {}} onSearchSubmit={() => {}} onOpenCart={() => {}} cartCount={cartCount} onOpenPrescription={() => {}} />
 
-      <section style={{ background: 'linear-gradient(90deg, #8b0000 0%, #c62828 50%, #e53935 100%)', padding: '60px 24px', color: 'white', textAlign: 'center' }}>
-        <h1 style={{ fontFamily: 'Space Grotesk', fontSize: 42, fontWeight: 800, marginBottom: 12,color: '#ffffff' }}>Contact <span style={{ color: '#2b2b2b' }}>Us</span></h1>
-        <p style={{ color: '#e2e8f0', fontSize: 16, maxWidth: 600, margin: '0 auto' }}>Find our presence across India. We are committed to providing 24/7 pharmaceutical support at your nearest location.</p>
+      <section className='breadCrumBg'>
+        <div className='badge'>
+          Reach Us
+        </div>
+        <h1>Contact <span>Us</span></h1>
+        <p>Find our presence across India. We are committed to providing 24/7 pharmaceutical support at your nearest location.</p>
       </section>
 
       <section style={{ background: '#f8faff', padding: '48px 24px' }}>

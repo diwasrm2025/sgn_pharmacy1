@@ -34,16 +34,16 @@ const OffersPage = ({ cart = [], onAddToCart, onChangeQty }) => {
     <div className="App">
       <SiteHeader searchQuery="" setSearchQuery={() => {}} onSearchSubmit={() => {}} onOpenCart={() => setIsCartOpen(true)} cartCount={cartCount} onOpenPrescription={() => {}} />
 
-      <section style={{ background: 'linear-gradient(135deg, #2d1b69 0%, #c41230 100%)', padding: '56px 24px', textAlign: 'center', color: 'white' }}>
-        <div style={{ background: '#f6ad55', color: '#1a1a1a', display: 'inline-block', padding: '4px 14px', borderRadius: 20, fontSize: 12, fontWeight: 700, marginBottom: 16 }}>
+      <section className='breadCrumBg'>
+        <div className='badge'>
           🎉 EXCLUSIVE DEALS
         </div>
-        <h1 style={{ fontFamily: 'Space Grotesk', fontSize: 42, fontWeight: 800, marginBottom: 12,color: '#e2e8f0' }}>Best Offers & <span style={{ color: '#fbd38d' }}>Coupons</span></h1>
-        <p style={{ color: '#e2e8f0', fontSize: 16, maxWidth: 500, margin: '0 auto' }}>Save big on medicines, lab tests, and healthcare products. New deals every week!</p>
+        <h1>Best Offers & <span>Coupons</span></h1>
+        <p>Save big on medicines, lab tests, and healthcare products. New deals every week!</p>
       </section>
 
       {/* Banners */}
-      <section style={{ background: '#f8faff', padding: '40px 24px' }}>
+      <section className='greyBg'>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: 20 }}>
             {banners.map((b, i) => (
@@ -54,9 +54,9 @@ const OffersPage = ({ cart = [], onAddToCart, onChangeQty }) => {
                 <div style={{ background: 'rgba(255,255,255,0.2)', display: 'inline-block', padding: '4px 12px', borderRadius: 20, fontSize: 12, fontWeight: 700, marginBottom: 12 }}>{b.label}</div>
                 <h3 style={{ fontSize: 20, fontWeight: 800, marginBottom: 8 ,color: '#e2e8f0'}}>{b.title}</h3>
                 <p style={{ fontSize: 13, opacity: 0.9, marginBottom: 16 }}>{b.subtitle}</p>
-                <button style={{ background: 'white', color: '#000000', border: 'none', padding: '8px 16px', borderRadius: 8, fontWeight: 700, fontSize: 13, cursor: 'pointer' }}>
+                {/* <button style={{ background: 'white', color: '#000000', border: 'none', padding: '8px 16px', borderRadius: 8, fontWeight: 700, fontSize: 13, cursor: 'pointer' }}>
                   Shop Now →
-                </button>
+                </button> */}
               </div>
             ))}
           </div>

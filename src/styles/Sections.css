@@ -399,3 +399,40 @@
   .articles-grid { grid-template-columns: 1fr; }
   .cat-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
+.breadCrumBg{
+   background: linear-gradient(135deg, #2d1b69 0%, #c41230 100%);
+   padding: 56px 24px; 
+   text-align: center; 
+   color: white;
+}
+.breadCrumBg .badge{
+  background: #f6ad55; 
+  color: #1a1a1a; 
+  display: inline-block; 
+  padding: 4px 14px; 
+  border-radius: 20px; 
+  font-size: 12px; 
+  font-weight: 700; 
+  margin-bottom: 16px;
+}
+.breadCrumBg h1{
+  font-family:'Space Grotesk';
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 12px;  
+  color: #ffffff;
+}
+.breadCrumBg h1 span{
+  color: #fbd38d;
+}
+.breadCrumBg p{
+  color:#ffffff;
+  font-size: 16px; 
+  max-width: 500px;
+  margin:0 auto;
+}
+.greyBg{
+  background:#f8faff;
+  padding:70px 24px;
+}

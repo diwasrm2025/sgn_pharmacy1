@@ -16,9 +16,12 @@ const CareerPage = ({ cart = [] }) => {
     <div className="App">
       <SiteHeader searchQuery="" setSearchQuery={() => {}} onSearchSubmit={() => {}} onOpenCart={() => {}} cartCount={cartCount} onOpenPrescription={() => {}} />
 
-      <section style={{ background: 'linear-gradient(90deg, #8b0000 0%, #c62828 50%, #e53935 100%)', padding: '60px 24px', color: 'white', textAlign: 'center' }}>
-        <h1 style={{ fontFamily: 'Space Grotesk', fontSize: 42, fontWeight: 800, marginBottom: 12,color: '#f0fff4'}}>Join Our <span style={{ color: '#000000' }}>Team</span></h1>
-        <p style={{ color: '#f0fff4', fontSize: 16, maxWidth: 600, margin: '0 auto' }}>Build the future of healthcare technology and delivery. We are looking for passionate individuals to join our growing family.</p>
+      <section className='breadCrumBg '>
+        <div className='badge'>
+          We are Hiring
+        </div>
+        <h1>Join Our <span>Team</span></h1>
+        <p>Build the future of healthcare technology and delivery. We are looking for passionate individuals to join our growing family.</p>
       </section>
 
       <section style={{ background: '#f8faff', padding: '48px 24px' }}>
